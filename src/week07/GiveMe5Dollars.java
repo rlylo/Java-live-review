@@ -1,6 +1,7 @@
 package week07;
 
 import java.util.Scanner;
+//simple change here and there
 
 public class GiveMe5Dollars {
     public static void main(String[] args) {
