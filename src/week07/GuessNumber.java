@@ -1,5 +1,6 @@
 package week07;
 //hello from local
+//abc from github
 import java.util.Scanner;
 import java.util.*;
 
