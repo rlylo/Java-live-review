@@ -1,8 +1,8 @@
 package week07;
 
 import java.util.Scanner;
-
-//haha
+//test
+//hehe
 
 public class CreateShoppingList {
     public static void main(String[] args) {
