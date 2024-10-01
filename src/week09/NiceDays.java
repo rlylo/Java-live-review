@@ -2,7 +2,7 @@ package week09;
 
 public class NiceDays {
     public static void main(String[] args) {
-        int[] temps = {66, 75, 78, 92, 72, 80, 90};
+        int[] temps = {    66,        75,         78,        92,         72,         80,        90};
         String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
         //Nice weather days ->(70-80)
