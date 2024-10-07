@@ -29,6 +29,17 @@ public class PlanetsList {
             System.out.println(planets.get(i));
         }
 
+        //print 2 planet at the time
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++==");
+        for (int i = 0; i < planets.size(); i += 2) {
+            if (i== planets.size()-1){
+                System.out.println(planets.get(i));
+            }else {
+                System.out.println(planets.get(i) + " - " + planets.get(i + 1));
+            }
+
+        }
+
 
     }
 }
