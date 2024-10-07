@@ -8,9 +8,11 @@ public class FilterCharacters {
         String letter = "";
         String digits = "";
         String special = "";
+        int sum = 0;
         for (char each : str.toCharArray()) {
             if (Character.isDigit(each)) {
                 digits += each;
+                sum += Integer.parseInt(each+"");
             } else if (Character.isLetter(each)) {
                 letter += each;
             } else {
@@ -20,6 +22,7 @@ public class FilterCharacters {
         System.out.println("letter = " + letter);
         System.out.println("digits = " + digits);
         System.out.println("special = " + special);
+        System.out.println("sum = " + sum);
 
     }
 }
