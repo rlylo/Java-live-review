@@ -9,6 +9,14 @@ public class TrafficLights {
     }
 
     public void setColor(String color) {
-        this.color = color;
+        color = color.toLowerCase();
+
+        if (color.equals("green") || color.equals("yellow") || color.equals("red")){
+            this.color = color;
+        }else {
+            System.err.println("Invalid color: "+ color);
+            System.exit(1);
+        }
+
     }
 }
