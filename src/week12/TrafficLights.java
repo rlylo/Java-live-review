@@ -8,6 +8,10 @@ public class TrafficLights {
         return color;
     }
 
+    public TrafficLights(String color) {
+        setColor(color);
+    }
+
     public void setColor(String color) {
         color = color.toLowerCase();
 
@@ -17,6 +21,7 @@ public class TrafficLights {
             System.err.println("Invalid color: "+ color);
             System.exit(1);
         }
+
 
     }
 }
