@@ -8,8 +8,17 @@ public class TestTrafficLight {
         trafficLights.setColor("red");
         System.out.println(trafficLights.getColor());
 
-        trafficLights.setColor("A");
-        System.out.println(trafficLights.getColor());
+//        trafficLights.setColor("A");
+//        System.out.println(trafficLights.getColor());
+
+        TrafficLights trafficLights1 = new TrafficLights("green");
+        trafficLights1.action();
+
+        trafficLights1.setColor("red");
+        trafficLights1.action();
+
+        trafficLights1.setColor("yeLlow");
+        trafficLights1.action();
 
 
 
