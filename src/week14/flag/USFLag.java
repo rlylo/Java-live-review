@@ -2,7 +2,7 @@ package week14.flag;
 
 import java.awt.*;
 
-public class USFLag extends Flag{
+public class USFLag extends Flag {
 
     @Override
     public void drawFlag() {
@@ -10,20 +10,28 @@ public class USFLag extends Flag{
         int height = grid.getHt();
         int width = grid.getWd();
 
-        // Calculate the height of each stripe
-        int stripeHeight = height / 13;
+        // Check grid dimensions to avoid division by zero
+        if (height == 0 || width == 0) {
+            System.out.println("Error: Grid dimensions are zero.");
+            return;
+        }
 
-        // Draw stripes
+        // Calculate the height of each stripe, with a fallback to avoid zero
+        int stripeHeight = Math.max(1, height / 13);
+        int cantonHeight = stripeHeight * 7;  // Blue canton height
+        int cantonWidth = (int) (width * 0.4);  // Blue canton width
+
+        // Loop through each cell in the grid to set colors
         for (int row = 0; row < height; row++) {
             for (int col = 0; col < width; col++) {
-                if (row < 7 * stripeHeight && col < width / 2.5) {
-                    // Draw blue rectangle for the stars area (approx 40% of flag height, 40% of width)
+                if (row < cantonHeight && col < cantonWidth) {
+                    // Color the canton (blue area)
                     grid.setColor(row, col, Color.BLUE);
                 } else if ((row / stripeHeight) % 2 == 0) {
-                    // Draw red stripes on even-numbered stripes
+                    // Color red stripes on even-numbered stripes
                     grid.setColor(row, col, Color.RED);
                 } else {
-                    // Draw white stripes on odd-numbered stripes
+                    // Color white stripes on odd-numbered stripes
                     grid.setColor(row, col, Color.WHITE);
                 }
             }
@@ -31,3 +39,4 @@ public class USFLag extends Flag{
     }
 
 }
+
