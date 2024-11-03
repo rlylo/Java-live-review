@@ -6,5 +6,14 @@ public class FlagClients {
         FranceFlag flag = new FranceFlag();
         flag.drawFlag();
 
+        Flag argentina = new ArgentinaFlag();
+        argentina.drawFlag();
+
+        Flag ukraine = new UkrainianFLag();
+        ukraine.drawFlag();
+
+        Flag usFlag = new USFLag();
+        usFlag.drawFlag();
+
     }
 }
