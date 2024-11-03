@@ -50,6 +50,8 @@ public abstract class DiscordUser {
 
     public abstract void sendMessage();
 
+    public abstract void sendMessage(String name);
+
     public abstract void joinDiscord(String serverUrl);
 
     @Override

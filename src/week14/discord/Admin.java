@@ -13,6 +13,10 @@ public class Admin extends DiscordUser {
     public void sendMessage() {
         System.out.println("Sending announcement to @everyone");
     }
+    @Override
+    public void sendMessage(String name) {
+        System.out.println(name + "is sending announcement to @everyone");
+    }
 
     @Override
     public void joinDiscord(String serverUrl) {
