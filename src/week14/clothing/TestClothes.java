@@ -17,6 +17,10 @@ public class TestClothes {
         Clothes jacket = new Jacket();
         jacket.wear();
         ((Jacket)jacket).putOnHood();
+        ((HasHood)jacket).putOnHood();
+
+        SportsWear sportHoodie = new Hoodie();
+        Hoodie hoodie1 = (Hoodie) sportHoodie;
 
     }
 }
