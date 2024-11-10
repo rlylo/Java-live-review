@@ -9,5 +9,14 @@ public class ThrowKeyword {
         }else {
             System.out.println("Allowed to buy tobacco");
         }
+
+
+        double balance = 255.66;
+        double price = 300.00;
+
+        balance-=price;
+        if (balance<0){
+            throw new NegativeBalanceException("Balance is less than 0");
+        }
     }
 }
