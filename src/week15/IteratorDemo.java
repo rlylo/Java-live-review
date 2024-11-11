@@ -31,5 +31,11 @@ public class IteratorDemo {
         }
         System.out.println(names);
 
+
+        System.out.println("===========removeIf===============");
+
+        names.removeIf(name -> name.contains("O"));
+        System.out.println(names);
+
     }
 }
