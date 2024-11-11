@@ -37,5 +37,28 @@ public class IteratorDemo {
         names.removeIf(name -> name.contains("O"));
         System.out.println(names);
 
+        Set<String> words = new HashSet<>();
+        words.add("Sunday");
+        words.add("Laptop");
+        words.add("Java");
+        words.add("HTML");
+        words.add("Selenium");
+
+        Iterator<String> setIT = words.iterator();
+        while (setIT.hasNext()){
+            System.out.println(setIT.next());
+        }
+        System.out.println("=============remove java==============");
+        List<String> list = new ArrayList<>(List.of("java","ruby","kotlin","c3","java","html"));
+        //list.removeIf(p->p.equals("java"));
+        System.out.println(list);
+        Iterator<String> it1 = list.iterator();
+        while (it1.hasNext()){
+            if (it1.next().equals("java")){
+                it1.remove();
+            }
+        }
+        System.out.println(list);
+
     }
 }
